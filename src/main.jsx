@@ -1,10 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import App from './App.jsx'
-import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+BX.ready(() => {
+  const slides = document.querySelectorAll('.bitrix-slider .slide')
+  const slidesHTML = [...slides].map(slide => slide.innerHTML)
+
+  ReactDOM.createRoot(document.querySelector('.bitrix-slider')).render(
+    <App slides={slidesHTML} />
+  )
+})
