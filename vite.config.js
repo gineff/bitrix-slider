@@ -10,9 +10,9 @@ export default defineConfig({
       },
       output: {
         dir: 'dist',
-        entryFileNames: 'script.js',
-        chunkFileNames: 'script.js',
-        assetFileNames: 'style[extname]',
+        entryFileNames: 'slider.js',
+        chunkFileNames: 'slider.js',
+        assetFileNames: 'slider[extname]',
       },
     },
   },
